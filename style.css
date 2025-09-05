@@ -1,0 +1,154 @@
+/* Main container */
+.maincontainer {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: rgb(251, 251, 254);
+    font-family: Arial, sans-serif;
+}
+
+/* Detail box */
+.detail_container {
+    position: relative;
+    max-width: 500px; /* Fixed: matched with maincontainer */
+    margin: 10px;
+    padding: 40px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* Toggle buttons */
+.btn {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 15px rgb(254, 215, 188);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.btn button {
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.btn button:hover {
+    transform: scale(1.05);
+}
+
+.btn button.active {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Slider highlight under active button */
+#slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background: pink;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.movesslider {
+    left: 50%;
+}
+
+/* Form section container */
+.form_section {
+    position: relative;
+    min-height: 350px; /* Changed to min-height for flexibility */
+}
+
+/* Login and Signup forms overlap */
+.login_box,
+.signup_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+/* Hidden form */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Floating label input */
+.input_box {
+    position: relative;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.input_box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid gray;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input_box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: gray;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+}
+
+.input_box input:focus ~ label,
+.input_box input:valid ~ label {
+    top: -5px;
+    left: 5px;
+    font-size: 12px;
+    color: black;
+}
+
+/* Submit buttons */
+.clickbtn {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    background: pink;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.clickbtn:hover {
+    transform: scale(1.05);
+    background: hotpink;
+    color: #fff;
+}
+
+.clickbtn:active {
+    transform: scale(0.95);
+}
